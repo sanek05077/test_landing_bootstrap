@@ -1,0 +1,146 @@
+/* partners-section */
+.partners-section {
+    padding: 3rem 0;
+    @include media-breakpoint-up(lg) {
+        padding: 5rem 0;
+    }
+}
+.partners-carousel {
+    position: relative;
+    margin: 0 -.5rem;
+    &__slide {
+        height: 48px;
+        position: relative;
+        margin: 0 .5rem;
+    }
+    img {
+        max-width: 100%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    img {
+        display: inline-block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.slick-dots {
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    li {
+        margin: 0 5px;
+        display: inline-block;
+        &.slick-active {
+            button {
+                background: $warning;
+            }
+        }
+        button {
+            border: 0;
+            padding: 0;
+            background: $primary;
+            border-radius: 50%;
+            width: 13px;
+            height: 13px;
+            font-size: 0;
+            line-height: 0;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

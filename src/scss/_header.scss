@@ -1,0 +1,57 @@
+/*header*/
+.btn {
+    min-width: 211px;
+    &.btn-warning {
+        color: $white;
+    }
+}
+.header {
+    .navbar {
+        @include media-breakpoint-down(sm) {
+            padding: 1rem 0;
+        }
+    }
+    .navbar-brand {
+        height: 41px;
+        padding: 0;
+        margin: 0;
+        img {
+            vertical-align: top;
+        }
+    }
+    .navbar-nav {
+        position: relative;
+        font-size: .9375rem;
+        font-weight: 600;
+        padding-top: 2rem;
+        @include media-breakpoint-up(lg) {
+            padding-top: 0;
+        }
+        .nav-item {
+            padding: 0 1rem .5rem;
+            @include media-breakpoint-up(lg) {
+                padding: 0 1.5rem;
+            }
+        }
+        .nav-link {
+            padding: 0;
+            position: relative;
+            display: inline-block;
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
+            &:hover {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -8px;
+                    height: 2px;
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,54 @@
+{
+  "name": "test_landing_bootstrap",
+  "version": "1.0.0",
+  "description": "Test landing page",
+  "main": "app.js",
+  "scripts": {
+    "build": "concurrently \"webpack --config webpack.config.js --mode production\" \"gulp\"",
+    "dev": "start webpack-dev-server --open --config webpack.config.js --mode development",
+    "start": "gulp",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx ."
+  },
+  "type": "module",
+  "author": "Aleksandr Lichko",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanek05077/test_landing_bootstrap"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@popperjs/core": "^2.11.5",
+    "autoprefixer": "10.4.5",
+    "babel-loader": "^8.2.4",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.0",
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^8.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mime-types": "^2.1.34",
+    "mini-css-extract-plugin": "^2.6.0",
+    "path": "^0.12.7",
+    "postcss": "^8.4.12",
+    "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "7.4.3",
+    "sass": "^1.51.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "bootstrap-icons": "^1.9.1",
+    "concurrently": "^7.3.0",
+    "jquery": "^3.6.0",
+    "slick-carousel": "^1.8.1"
+  }
+}

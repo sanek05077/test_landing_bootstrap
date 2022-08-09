@@ -1,0 +1,46 @@
+/*top-section*/
+.top-section {
+    font-size: 1.25rem;
+    padding: 1rem 0;
+    font-weight: 400;
+    font-family: $font-family-mulish;
+    min-height: calc(100vh - 101px);
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-up(lg) {
+        min-height: calc(100vh - 120px);
+    }
+    h1 {
+        color: $gray-900;
+        line-height: 1;
+        font-weight: 700;
+        margin-bottom: 1.875rem;
+        @include media-breakpoint-down(xl) {
+            font-size: calc(1rem + 4.5vw);
+        }
+    }
+    p {
+        margin-bottom: 3rem;
+    }
+    .btns-block {
+        display: flex;
+        align-items: center;
+    }
+    .scroll-link {
+        width: 60px;
+        height: 60px;
+        border: 1px solid $gray-200;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1rem;
+        @include media-breakpoint-up(md) {
+            margin-left: 2.5rem;
+        }
+        &:hover,
+        &:focus {
+            background-color: $gray-200;
+        }
+    }
+}

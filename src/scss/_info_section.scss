@@ -1,0 +1,28 @@
+/*info-section*/
+.info-section {
+    padding: 2rem 0 4rem;
+    @include media-breakpoint-up(lg) {
+        padding: 3.75rem 0 9rem;
+    }
+}
+.subscription-form {
+    background: $primary;
+    border-radius: 16px;
+    padding: 2.1875rem 2.375rem;
+    h3 {
+        color: $white;
+        font-family: $font-family-lato;
+        font-weight: 700;
+        margin-bottom: 2.1875rem;
+    }
+    .form-floating  {
+        margin: 0 0 1rem;
+        > label {
+            padding: 1.25rem 1rem;
+            font-size: 1rem;
+        }
+    }
+    .btns-block {
+        padding-top: 10px;
+    }
+}
